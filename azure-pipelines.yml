@@ -1,0 +1,13 @@
+# Pipeline to mirror branch updates from GIT
+# Will trigger on update
+trigger:
+- '*'
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: gitmirror@0
+  inputs:
+    GitRepoUrl: 'https://et2avbfd7f75wpnoxusiih42oqux2i23gozxnphgn3maaswt5ppa@dev.azure.com/IKEACOMMUNICATIONS/HF360/_git/HF360.git'
+
